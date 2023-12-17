@@ -1,0 +1,18 @@
+/* src/ThankYou.css */
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .submitted-details {
+    margin-top: 20px;
+  }
+  
+  .submitted-details p {
+    margin: 10px 0;
+  }
+  
