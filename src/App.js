@@ -47,12 +47,11 @@ function App() {
     
     const endOfMonth = getEndOfMonth(formData.joinDate);
 
-    // TODO: Make a call to your REST API here
-    // Use formData to send user details to the backend
+   
     console.log('Form submitted:', formData);
     console.log('End of the month:', endOfMonth);
 
-    // Update state to show the submitted view
+    
     setSubmitted(true);
   };
 
