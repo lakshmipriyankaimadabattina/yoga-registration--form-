@@ -1,6 +1,6 @@
 // src/ThankYou.js
 import React from 'react';
-import './ThankYou.css'; // Import the ThankYou component styles
+import './ThankYou.css'; 
 
 function ThankYou({ formData }) {
   return (
