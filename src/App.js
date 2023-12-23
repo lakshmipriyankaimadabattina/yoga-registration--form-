@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './App.css';
-import ThankYou from './ThankYou'; // Import ThankYou component
+import ThankYou from './ThankYou'; 
 
 const batches = ['6-7AM', '7-8AM', '8-9AM', '5-6PM'];
-const feePerMonth = 500; // Assuming a fixed fee of 500 Rs per month
+const feePerMonth = 500; 
 
 function getEndOfMonth(date) {
   const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
@@ -34,17 +34,17 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check age limit
+    
     const age = parseInt(formData.age);
     if (age < 18 || age > 65) {
       setErrorMessage('Age must be between 18 and 65.');
       return;
     }
 
-    // Clear previous error messages
+    
     setErrorMessage('');
 
-    // Calculate end of the month
+    
     const endOfMonth = getEndOfMonth(formData.joinDate);
 
     // TODO: Make a call to your REST API here
