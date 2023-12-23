@@ -5,10 +5,10 @@ const sqlite3 = require('sqlite3');
 const app = express();
 const port = 5000;
 
-// Create a SQLite database connection
+
 const db = new sqlite3.Database('yoga.db');
 
-// Create a "yoga_admissions" table if it doesn't exist
+
 db.run(`
   CREATE TABLE IF NOT EXISTS yoga_admissions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.post('/submit-form', (req, res) => {
   const { name, age, selectedBatch, joinDate } = req.body;
 
-  // Insert form data into the 'yoga_admissions' table
+  
   db.run(
     'INSERT INTO yoga_admissions (name, age, selectedBatch, joinDate) VALUES (?, ?, ?, ?)',
     [name, age, selectedBatch, joinDate],
@@ -41,7 +41,7 @@ app.post('/submit-form', (req, res) => {
   );
 });
 
-// Simple GET route for testing
+
 app.get('/submit-form', (req, res) => {
   res.send('Hello from GET /submit-form');
 });
