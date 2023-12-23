@@ -20,7 +20,7 @@ function ThankYou({ formData }) {
         <p>
           <strong>Joining Date:</strong> {formData.joinDate.toLocaleDateString()}
         </p>
-        {/* Add any additional details here based on customer requirements */}
+  
       </div>
     </div>
   );
