@@ -21,7 +21,7 @@ db.run(`
 
 app.use(bodyParser.json());
 
-// Handle form submissions - POST route
+
 app.post('/submit-form', (req, res) => {
   const { name, age, selectedBatch, joinDate } = req.body;
 
